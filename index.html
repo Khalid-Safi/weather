@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <!-- Style CSS File -->
+    <link rel="stylesheet" href="./Css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" class="search-input" id="search-input" placeholder="Location">
+            <i onclick="getCityName()" class="fa-solid fa-magnifying-glass search" id="search-btn"></i>
+        </div>
+        <div class="main">
+            <h3 id="adress">not found</h3>
+            <img src="" alt="" class="weather-icon" id="icon">
+            <h1 id="derece">not found <span></span></h1>     
+        </div>
+        <div class="footer">
+            <div>
+                <i class="fa-solid fa-wind wind"></i>
+                <span id="wend">not found</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud-sun cloud-sun"></i>
+                <span id="weather">not found</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-temperature-quarter wind" style="margin-top: 15px;"></i>
+                <span id="humidity">not found</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome File -->
+    <script src="./Js/all.min.js"></script>
+    <!-- Main JS File -->
+    <script src="./Js/main.js"></script>
+</body>
+</html>

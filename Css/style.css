@@ -1,0 +1,97 @@
+body{
+    background-color: #141022;
+    font-family: 'Protest Riot', sans-serif;
+}
+.container{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(252, 252, 252);
+    padding: 20px;
+    border-radius: 15px;
+    
+
+}
+.search-box{
+    display: flex;
+    align-items: center;
+}
+.container .search-input{
+    width: 85%;
+    padding: 10px 5px;
+    border-radius: 15px;
+    font-size: 17px;
+    border: 1px solid #9f9f9f;
+    padding-left: 10px;
+    transition: 1s all ease-in-out;
+}
+.search-input:focus{
+    outline: 2px solid #141022;
+    
+}
+.search{
+    border: 1px solid #9f9f9f;
+    padding: 12px;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s all ease-in;
+    color: #9f9f9f;
+}
+.search:hover{
+    background-color: #141022;
+    color: white;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+#adress{
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.weather-icon{
+    width: 100px;
+}
+#derece{
+    padding-top: 8px;
+    position: relative;
+}
+#derece span{
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.footer div .cloud-sun,.wind{
+    font-size: 30px;
+    padding-right: 5px;
+    color: #141022;
+    
+}
+@media (max-width:767px){
+    .container{
+        width: 200px;
+    }
+    .container h1{
+        font-size: 20px;
+    }
+    .container h1 span{
+        font-size: 10px;
+    }
+    .cloud-sun{
+        margin-top: 15px;
+    }
+}
