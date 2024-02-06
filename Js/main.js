@@ -26,7 +26,7 @@ function getWeather(){
         .then((repositories) => {
             city.innerHTML = repositories.name;
             let celisius = repositories.main.temp - 273;
-            derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span> C</h1>`;
+            derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span>  C</h1>`;
             weatherCity.innerHTML = `${repositories.weather[0].main}(${repositories.weather[0].description})`
             wendCity.innerHTML  = `${repositories.wind.speed}km/H Wind Speed`
             icon.src = `https://openweathermap.org/img/wn/${repositories.weather[0].icon}.png`;
@@ -43,7 +43,7 @@ function getWeatherThanLocal(){
         .then((repositories) => {
             city.innerHTML = repositories.name;
             let celisius = repositories.main.temp - 273;
-            derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span> C</h1>`;
+            derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span>  C</h1>`;
             weatherCity.innerHTML = `${repositories.weather[0].main}(${repositories.weather[0].description})`
             wendCity.innerHTML  = `${repositories.wind.speed}km/H Wind Speed`
             icon.src = `https://openweathermap.org/img/wn/${repositories.weather[0].icon}.png`;
