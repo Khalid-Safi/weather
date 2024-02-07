@@ -38,7 +38,7 @@ function getWeather(){
                     setTimeout(() => {
                         searchInput.classList.remove('error')
                     }, 1000);
-                    localStorage.removeItem('adress');
+                    localStorage.setItem('adress','https://api.openweathermap.org/data/2.5/weather?q=palestine&appid=b513826a8063ba4050422b7e5e7b1549');
                 }
 
                 else{
