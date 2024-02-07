@@ -38,7 +38,7 @@ function getWeather(){
                 wendCity.innerHTML  = `${repositories.wind.speed}km/H Wind Speed`
                 icon.src = `https://openweathermap.org/img/wn/${repositories.weather[0].icon}.png`;
                 humidity.innerHTML  = `${repositories.main.humidity}% humidity`
-                console.log(repositories);
+
             }
             
         });
