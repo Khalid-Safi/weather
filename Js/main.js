@@ -24,15 +24,25 @@ function getWeather(){
         .then((response) => response.json())
 
         .then((repositories) => {
-            city.innerHTML = repositories.name;
-            let celisius = repositories.main.temp - 273;
-            derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span>  C</h1>`;
-            weatherCity.innerHTML = `${repositories.weather[0].main}(${repositories.weather[0].description})`
-            wendCity.innerHTML  = `${repositories.wind.speed}km/H Wind Speed`
-            icon.src = `https://openweathermap.org/img/wn/${repositories.weather[0].icon}.png`;
-            humidity.innerHTML  = `${repositories.main.humidity}% humidity`
-
+            if(repositories.cod == '404'){
+                searchInput.classList.add('error');
+                setTimeout(() => {
+                    searchInput.classList.remove('error')
+                }, 1000);
+            }
+            else{
+                city.innerHTML = repositories.name;
+                let celisius = repositories.main.temp - 273;
+                derece.innerHTML = `<h1 id="derece">${Math.round(celisius)} <span>o</span>  C</h1>`;
+                weatherCity.innerHTML = `${repositories.weather[0].main}(${repositories.weather[0].description})`
+                wendCity.innerHTML  = `${repositories.wind.speed}km/H Wind Speed`
+                icon.src = `https://openweathermap.org/img/wn/${repositories.weather[0].icon}.png`;
+                humidity.innerHTML  = `${repositories.main.humidity}% humidity`
+                console.log(repositories);
+            }
+            
         });
+    
     
 
 }
